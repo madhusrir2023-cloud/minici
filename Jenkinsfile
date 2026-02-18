@@ -28,6 +28,13 @@ pipeline {
             }
         }
 
+        stage('Error Test') {
+            steps {
+                echo 'Forcing error for testing...'
+                bat 'exit 1'
+            }
+        }
+
         stage('Archive') {
             steps {
                 echo 'Archiving artifacts...'
