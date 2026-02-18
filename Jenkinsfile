@@ -31,7 +31,7 @@ pipeline {
         stage('Archive') {
             steps {
                 echo 'Archiving artifacts...'
-                archiveArtifacts artifacts: '*.class', fingerprint: true
+                archiveArtifacts artifacts: '*.class'
             }
         }
     }
